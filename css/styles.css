@@ -18,18 +18,15 @@ header {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  width: 95%;
+  width: 80%;
   max-width: 1100px;
   margin: auto;
   padding: 5px;
 }
 
-img {
-  display: block;
-  width: 100%;
-}
 
 h1 {
+  color: #FFD700;
   text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.3);
 }
 
@@ -125,6 +122,7 @@ h1 {
 @media (min-width: 768px) {
   body {
     padding: 25px;
+    background-size: 1200px auto;
   }
 
   header {
