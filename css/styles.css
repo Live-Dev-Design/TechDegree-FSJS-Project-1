@@ -6,7 +6,9 @@
  @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i&display=swap');
 
 body {
-  background-color: rgb(58, 193, 98);
+  background-color: slategray;
+  background: url('img/img1.jpg') no-repeat top center ;
+  background-size: auto;
   color: white;
   font-family: 'Playfair Display', serif;
   padding: 5px;
@@ -20,6 +22,11 @@ header {
   max-width: 1100px;
   margin: auto;
   padding: 5px;
+}
+
+img {
+  display: block;
+  width: 100%;
 }
 
 h1 {
@@ -41,7 +48,7 @@ h1 {
 }
 
 .load-quote:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .load-quote:focus {
@@ -57,7 +64,7 @@ h1 {
 
 .quote-box {
   text-shadow: 1px 1px 1px rgba(50, 50, 50, 0.3);
-  line-height: 0.5;
+  line-height: 1.5;
 }
 
 .quote {
@@ -129,7 +136,7 @@ h1 {
     height: 73px;
     margin-top: 20px;
     margin-right: 5px;
-    border-bottom: 4px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 4px solid rgba(0, 0, 0, 0.4);
   }
 
   .load-quote {
@@ -138,7 +145,7 @@ h1 {
 
   .container {
     padding: 25px 25px 15px 55px;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.4);
     border-left: 5px solid rgba(0, 0, 0, 0.3);
     border-radius: 0 4px 4px 0;
   }
