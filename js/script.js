@@ -136,5 +136,5 @@ return intVal;
 document.getElementById('load-quote').addEventListener("click", function() {
   clearInterval(intVal);
   printQuote();
-  intVal = setInterval(printQuote, 10000); // Auto-refreshed quotes after 20 seconds
+  intVal = setInterval(printQuote, 10000); // Auto-refreshed quotes after 10 seconds
 });
