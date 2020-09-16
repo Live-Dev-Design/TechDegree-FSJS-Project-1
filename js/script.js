@@ -98,8 +98,8 @@ function printQuote() {
   document.getElementById('quote-box').innerHTML = quoteData;
 }
 
-// Auto-refreshed quotes after 10 seconds
-window.setInterval(printQuote, 10000 );
+// Auto-refreshed quotes after 20 seconds
+setInterval(printQuote, 20000 );
 
 /*************************************************
  * click event listener for the print quote button
