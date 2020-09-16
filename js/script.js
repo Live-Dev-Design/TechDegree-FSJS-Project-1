@@ -60,7 +60,8 @@ printQuote();
 
 function getRandomQuote() {
   // assign a random number between 0 - 5 to a variable
-  const randomNumber = Math.floor(Math.random() * 5);
+  const randomNumber = Math.floor(Math.random() * 4);
+  console.log(randomNumber);
   return quotes[randomNumber]; // use the random number to return an object from the quotes array
 }
 
