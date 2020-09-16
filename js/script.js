@@ -88,7 +88,7 @@ function printQuote() {
    <p classs="source">${randomQuote.source}`;
 
   
-  if (randomQuote.quote === quoteBox.firstElementChild.innerHTML) {
+  if (randomQuote.quote === quoteBox.firstElementChild.textContent) {
       printQuote();
     } else {
     // conditional statement if there is a "citation" property to concatenate to the quoteData variable
