@@ -6,7 +6,7 @@ project 1 - A Random Movie Quote Generator
 /******************** 
    `quotes` array 
 ********************/
-// create an array with 5 objects containing multiple properties
+// created an array with 5 objects containing multiple properties
 const quotes = [
   {
     quote: "May the Force be with you.",
@@ -50,7 +50,7 @@ const quotes = [
   }
 ];
 
-// create variable intVal to be used later for setInterval
+// created variable intVal to be used later for setInterval
 let intVal;
 
 // Initialise random quote to screen and setInterval timer
