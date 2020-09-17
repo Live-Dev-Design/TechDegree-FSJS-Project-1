@@ -1,6 +1,6 @@
 /******************************************
 Treehouse FSJS Techdegree:
-project 1 - A Random Quote Generator
+project 1 - A Random Movie Quote Generator
 ******************************************/
 
 /******************** 
@@ -48,7 +48,6 @@ const quotes = [
     genre: 'Science Fiction Film',
     img: 'img/img4.jpg'
   }
-
 ];
 
 // create variable intVal to be used later for setInterval
@@ -69,7 +68,6 @@ function getRandomQuote() {
   return quotes[randomNumber]; 
 }
 
-
 /**************************
  * `printQuote` function
 ***************************/
@@ -87,7 +85,6 @@ function printQuote() {
   `<p class="quote">${randomQuote.quote}</p>
    <p classs="source">${randomQuote.source}`;
 
-  
   if (randomQuote.quote === quoteBox.firstElementChild.textContent) {
       printQuote();
     } else {
@@ -103,20 +100,16 @@ function printQuote() {
     if (randomQuote.genre) {
       quoteData += `<span class="year">${randomQuote.genre}</span>`;
     }
-    // conditional statement if there is a "img" property to change the background img that matches the quote based on the title img name and the random number/quote used
+    // conditional statement if there is a "img" property to change the "img" that matches the quote based on the title img name and the random number/quote used
     if (randomQuote.img) {
-      quoteData += `<img src="${randomQuote.img}" class="image">`;
-      
-
+      quoteData += `<img src="${randomQuote.img}" class="image">`;      
     }
     // finally manipulating the DOM with ID of quote-box to inject the content of the quoteData variable
     quoteBox.innerHTML = quoteData;
     getRandomColor();
 
   };
-
 }
-
 
 /**************************
  * `interVal` function
@@ -127,7 +120,6 @@ function interVal() {
 intVal = setInterval(printQuote, 10000);
 return intVal;
 }
-
 
 /**************************
  * `getRandomColor` function
@@ -142,8 +134,6 @@ function getRandomColor() {
   }
   return document.body.style.backgroundColor = color;
 }
-
-
 
 /*************************************************
  * click event listener for the print quote button
