@@ -14,7 +14,7 @@ const quotes = [
     citation:'Star Wars A New Hope',
     year: 1977,
     genre: 'Science Fiction Film',
-    img: 'img0'
+    img: 'img/img0.jpg'
   },
   {
     quote: "Carpe diem. Seize the day, boys. Make your lives extraordinary.",
@@ -22,7 +22,7 @@ const quotes = [
     citation: 'Dead Poets Society Film',
     year: 1989,
     genre: 'Drama Film',
-    img: 'img1'
+    img: 'img/img1.jpg'
   },
   {
     quote: "A martini. Shaken, not stirred.",
@@ -30,7 +30,7 @@ const quotes = [
     citation: 'Goldfinger',
     year: 1964,
     genre: 'Action Film',
-    img: 'img2'
+    img: 'img/img2.jpg'
   },
   {
     quote: "Yippie-ki-yay, motherf—er!",
@@ -38,7 +38,7 @@ const quotes = [
     citation: 'Die Hard',
     year: 1988,
     genre: 'Action Film',
-    img: 'img3'
+    img: 'img/img3.jpg'
   },
   {
     quote: "Roads? Where we're going we don't need roads.",
@@ -46,7 +46,7 @@ const quotes = [
     citation: 'Back to the Future',
     year: 1985,
     genre: 'Science Fiction Film',
-    img: 'img4'
+    img: 'img/img4.jpg'
   }
 
 ];
@@ -105,10 +105,13 @@ function printQuote() {
     }
     // conditional statement if there is a "img" property to change the background img that matches the quote based on the title img name and the random number/quote used
     if (randomQuote.img) {
-      document.body.style.backgroundImage = `url('css/img/${randomQuote.img}.jpg')`;
+      quoteData += `<img src="${randomQuote.img}" class="image">`;
+      
+
     }
     // finally manipulating the DOM with ID of quote-box to inject the content of the quoteData variable
     quoteBox.innerHTML = quoteData;
+    getRandomColor();
 
   };
 
@@ -126,15 +129,30 @@ return intVal;
 }
 
 
+/**************************
+ * `getRandomColor` function
+***************************/
+// function to generate a HEX code to be used for the background style:
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    // add the # to the random 6 hexidecimal values
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return document.body.style.backgroundColor = color;
+}
+
+
 
 /*************************************************
  * click event listener for the print quote button
 *************************************************/
 
-// document.getElementById('load-quote').addEventListener("click", printQuote, false);
-
+// event listerner on the ID 'load-quote'
 document.getElementById('load-quote').addEventListener("click", function() {
-  clearInterval(intVal);
-  printQuote();
+  clearInterval(intVal); // clear setInterval time with each click event
+  printQuote(); // call the printQuote function with a click event
   intVal = setInterval(printQuote, 10000); // Auto-refreshed quotes after 10 seconds
+  getRandomColor(); // use getRandomColor variable to change background color with a click event
 });
