@@ -140,7 +140,7 @@ function getRandomColor() {
 *************************************************/
 
 // event listerner on the ID 'load-quote'
-document.getElementById('load-quote').addEventListener("click", function() {
+document.getElementById('load-quote').addEventListener("click", () => {
   clearInterval(intVal); // clear setInterval time with each click event
   printQuote(); // call the printQuote function with a click event
   intVal = setInterval(printQuote, 10000); // Auto-refreshed quotes after 10 seconds
